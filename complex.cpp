@@ -67,6 +67,7 @@ Complex Complex::pow(int n)
 
 void Complex::show()
 {
+  cout.precision(3);
   cout << re << " ";
   if (im > 0)
     cout << "+ " << im << "i";
