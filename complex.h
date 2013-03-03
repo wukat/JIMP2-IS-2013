@@ -16,6 +16,7 @@ public:
   Complex sub(Complex c);
   Complex mul(Complex c);
   Complex div(Complex c);
+  double abs();
   Complex pow(int n);
   void show();
 };

@@ -19,7 +19,7 @@ Punkt::~Punkt()
 
 double Punkt::distance(Punkt inny)
 {
-  return sqrt(pow(x-inny.x,2)+pow(y-inny.y,2));
+  return sqrt(pow(x - inny.x, 2) + pow(y - inny.y, 2));
 }
 
 void Punkt::wyswietl()
