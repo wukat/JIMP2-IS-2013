@@ -4,29 +4,6 @@
 
 using namespace std;
 
-Punkt::Punkt():x(0),y(0)
-{}
-
-Punkt::Punkt(double _x, double _y)
-{
-  x = _x;
-  y = _y;
-}
-
-Punkt::~Punkt()
-{
-}
-
-double Punkt::distance(Punkt inny)
-{
-  return sqrt(pow(x - inny.x, 2) + pow(y - inny.y, 2));
-}
-
-void Punkt::wyswietl()
-{
-  cout << "(" << x << ";" << y << ")";
-}
-
 Kwadrat::Kwadrat():w1(0,0),w2(0,0),w3(0,0),w4(0,0)
 {}
 
@@ -55,10 +32,4 @@ double Kwadrat::pole()
   return pow(w1.distance(w2), 2);
 }
 
-int main()
-{
-  Kwadrat fajny(1,1,1,2,2,2,2,1);
-  cout << "Nasz fajny kwadrat ma pole rowne " << fajny.pole() << " i odwod rowny " << fajny.obwod() << "." << endl;
 
-  return 0;
-}
