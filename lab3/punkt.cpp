@@ -2,6 +2,8 @@
 #include <iostream>
 #include "punkt.h"
 
+using namespace std;
+
 Punkt::Punkt():x(0),y(0)
 {}
 
@@ -15,9 +17,7 @@ Punkt::Punkt(const Punkt &punkt)
 {
   this->x = punkt.x;
   this->y = punkt.y;
-  cout << "Konstruktor kopiuj¹cy!" << endl;
-}
-
+  cout << "Konstruktor kopiujacy!" << endl;
 }
 
 Punkt::~Punkt()

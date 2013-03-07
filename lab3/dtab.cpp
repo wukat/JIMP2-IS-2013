@@ -6,7 +6,7 @@ using namespace std;
 void DTab::resize(int newsize)
 {
   double * buf = new double[newsize];
-  for (int i = 0; i < length; i++)
+  for (int i = 0; (i < length) && (i < last); i++)
     buf[i] = tab[i];
   if (tab != NULL) delete [] tab;
   tab = buf;
@@ -26,10 +26,28 @@ DTab::DTab(int initLength)
   last = 0;
 }
 
+DTab::DTab(const DTab &stara)
+{
+  tab = new double[stara.length];
+  for (int i = 0; (i < stara.length) && (i < stara.last); i++)
+    tab[i] = stara.tab[i];
+  this->length = stara.length;
+  this->last = stara.last;
+}
+
 DTab::~DTab()
 {
   delete [] tab;
   cout << "usuwam";
+}
+
+DTab DTab::wypelniona(double wypelnienie)
+{
+  for (int i = 0; i < this->length; i++)
+    this->tab[i] = wypelnienie;
+  this->last = length;
+
+  return *this;
 }
 
 void DTab::add(double element)
@@ -53,8 +71,8 @@ double DTab::get(int index)
     return tab[index];
   else
   {
-  	  cout << "Blad" << endl;
-  	  return 0.0;
+    cout << "Blad" << endl;
+    return 0.0;
   }
 }
 

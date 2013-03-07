@@ -12,8 +12,10 @@ private:
 public:
   DTab();
   DTab(int initLength);
+  DTab(const DTab &nowa);
   ~DTab();
 
+  DTab wypelniona(double wypelnienie);
   void add(double element);
   double get(int index);
   void set(double element, int index);
