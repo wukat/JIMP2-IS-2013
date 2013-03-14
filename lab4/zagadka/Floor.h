@@ -13,9 +13,11 @@ public:
   ~Floor();
   Floor(const Floor &);
 
-  Block get(int);
+  int get(int);
   void set(int, int);
   void setcolor(int);
+  int getcolor();
+  bool check();
   void show();
 
 private:
