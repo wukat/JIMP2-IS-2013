@@ -1,10 +1,8 @@
-#include <iostream>
 #include "Pyramid.h"
 #include "Block.h"
 #include "Floor.h"
 
 using namespace std;
-
 
 int main()
 {
