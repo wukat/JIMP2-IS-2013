@@ -1,7 +1,8 @@
 #ifndef COMPLEX_H
 #define COMPLEX_H
 #include <iostream>
-#include "matrix.h"
+
+class Matrix;
 
 class Complex
 {

@@ -1,6 +1,7 @@
 #include "complex.h"
+#include "matrix.h"
 #include <math.h>
-#include <sstream>
+
 
 using namespace std;
 
@@ -152,9 +153,6 @@ bool Complex::operator<(Complex c)
 
 Complex::operator Matrix() const
 {
-  ostringstream ss;
-  ss << im << "i" << re;
-  string complex_number = ss.str();
-  return Matrix(1,1,complex_number);
+  return Matrix(1,1,*this);
 }
 

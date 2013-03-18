@@ -1,18 +1,20 @@
 #ifndef MATRIX_H
 #define MARTIX_H
 #include <iostream>
+#include "complex.h"
+
 
 using namespace std;
 
 class Matrix
 {
 private:
-  string ** matr;
+  Complex ** matr;
   int size1, size2;
 
 public:
   Matrix();
-  Matrix(int, int, string);
+  Matrix(int, int, Complex);
   Matrix(const Matrix &);
   ~Matrix();
 };
