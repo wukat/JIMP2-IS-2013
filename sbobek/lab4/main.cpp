@@ -6,6 +6,8 @@
 #include <list>
 #include <time.h>
 
+using namespace std;
+
 int main()
 {
   Dziecko Grodzka("Anna", "Grodzka", 55, "Wojnowo");

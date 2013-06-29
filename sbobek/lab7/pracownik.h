@@ -1,9 +1,7 @@
 #ifndef PRACOWNIK_H
 #define PRACOWNIK_H
 #include <iostream>
- 
-using namespace std;
- 
+
 class Umowa
 {
   protected:
@@ -14,7 +12,7 @@ class Umowa
     double pobierzBrutto();
     virtual ~Umowa(){};
 };
- 
+
 class UmowaDzielo: public Umowa
 {
   public:
@@ -22,7 +20,7 @@ class UmowaDzielo: public Umowa
     virtual double pobierzNetto();
     virtual ~UmowaDzielo(){};
 };
- 
+
 class UmowaPraca: public Umowa
 {
   public:
@@ -30,14 +28,14 @@ class UmowaPraca: public Umowa
     virtual double pobierzNetto();
     virtual ~UmowaPraca(){};
 };
- 
+
 class Pracownik
 {
   private:
-    string imie, nazwisko, pesel;
+    std::string imie, nazwisko, pesel;
     Umowa* umowa;
   public:
-    Pracownik(string i, string n, string p, Umowa* u) : imie(i),nazwisko(n),pesel(p),umowa(u){};
+    Pracownik(std::string i, std::string n, std::string p, Umowa* u) : imie(i),nazwisko(n),pesel(p),umowa(u){};
     Pracownik(const Pracownik &);
     ~Pracownik(){};
     double pobierzPensje();

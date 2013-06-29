@@ -6,10 +6,10 @@ class Ksztalt;
 class Kwadrat: public Ksztalt
 {
   private:
-   int g;
+    int g;
   public:
     Kwadrat() : Ksztalt() {};
-    virtual void rysuj() const;
+    void rysuj() const;
     virtual ~Kwadrat() {};
 };
 

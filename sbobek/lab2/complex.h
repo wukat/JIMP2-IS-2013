@@ -1,23 +1,21 @@
 #ifndef COMLEX_H
 #define COMLEX_H
 
-
 class Complex
 {
-private:
   double im, re;
 
 public:
   Complex();
   Complex(double _re, double _im);
-  ~Complex();
+  virtual ~Complex();
 
-  Complex add(Complex c);
-  Complex sub(Complex c);
-  Complex mul(Complex c);
-  Complex div(Complex c);
+  Complex add(Complex);
+  Complex sub(Complex);
+  Complex mul(Complex);
+  Complex div(Complex);
   double abs();
-  Complex pow(int n);
+  Complex pow(int);
   void show();
 };
 #endif

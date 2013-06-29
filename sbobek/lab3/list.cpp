@@ -6,13 +6,13 @@ using namespace std;
 List::List():head(NULL)
 {}
 
-List::List(node * first):head(first)
+List::List(node * first) : head(first)
 {}
 
 List::List(const List &old)
 {
   node * actual = old.head;
-  if (old.head != NULL) 
+  if (old.head != NULL)
   {
     head = new node;
     node * actual2 = head;
@@ -31,7 +31,7 @@ List::List(const List &old)
   }
   else
     head = NULL;
-} 
+}
 
 List::~List()
 {
@@ -62,7 +62,7 @@ void List::find(string word)
     node * actual = head;
     int i = 1;
     string number;
-    if (actual->content == word) 
+    if (actual->content == word)
     {
       ostringstream ss;
       ss << i;
@@ -72,10 +72,10 @@ void List::find(string word)
       result += ",";
     }
     while (actual->next != NULL)
-    {  
+    {
       actual = actual->next;
       i++;
-      if (actual->content == word) 
+      if (actual->content == word)
       {
         ostringstream ss;
         ss << i;
@@ -103,17 +103,17 @@ void List::add_on_end(string word)
     node * actual = head;
     while (actual->next != NULL)
       actual = actual->next;
-    actual->next = new node; 
+    actual->next = new node;
     actual = actual->next;
     actual->next = NULL;
     actual->content = word;
-  } 
+  }
 }
 
 void List::add_on_pos(int pos, string word)
 {
   if (head != NULL)
-  { 
+  {
     node * actual = head;
     for (int i = 1; i < pos; i++)
       if (actual->next != NULL)
@@ -137,7 +137,7 @@ void List::add_on_pos(int pos, string word)
 void List::del_pos(int pos)
 {
   if (head != NULL and pos > 0)
-  { 
+  {
     node * actual = head;
     int ok = 1;
     for (int i = 1; i < pos - 1; i++)
@@ -145,7 +145,7 @@ void List::del_pos(int pos)
         actual = actual->next;
       else ok = 0;
     if (ok == 1 && actual->next != NULL)
-    {  
+    {
       node * help = actual->next->next;
       delete actual->next;
       actual->next = help;

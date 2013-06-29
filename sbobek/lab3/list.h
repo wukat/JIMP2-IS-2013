@@ -3,20 +3,17 @@
 #include <iostream>
 #include <cstring>
 
-using namespace std;
-
-struct node 
+struct node
 {
   struct node * next;
-  string content;
+  std::string content;
 };
 
 typedef struct node node;
 
 class List
 {
-private:
-  node * head;  
+  node * head;
 
 public:
   List();
@@ -24,9 +21,9 @@ public:
   List(const List &);
   ~List();
 
-  void find(string);
-  void add_on_end(string);
-  void add_on_pos(int, string);
+  void find(std::string);
+  void add_on_end(std::string);
+  void add_on_pos(int, std::string);
   void del_pos(int);
   void read();
 };

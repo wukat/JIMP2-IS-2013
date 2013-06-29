@@ -6,7 +6,6 @@
 
 using namespace std;
 
-
 Marsjanin::Marsjanin()
 { licznik++; }
 

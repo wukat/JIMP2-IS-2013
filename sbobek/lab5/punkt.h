@@ -3,22 +3,19 @@
 #include <iomanip>
 #include <iostream>
 
-using namespace std;
-
 class Punkt
 {
-protected:
   double x, y;
 public:
   Punkt();
-  Punkt(double _x, double _y);
-  Punkt(const Punkt &punkt);
+  Punkt(double, double);
+  Punkt(const Punkt &);
   ~Punkt();
 
   double distance(Punkt inny);
   void wyswietl();
-  friend istream & operator>>(istream &, Punkt &);
-  friend ostream & operator<<(ostream &, Punkt &);
+  friend std::istream & operator>>(std::istream &, Punkt &);
+  friend std::ostream & operator<<(std::ostream &, Punkt &);
   double getX(){return x;}
   double getY(){return y;}
   void setX(double _x){x=_x;}

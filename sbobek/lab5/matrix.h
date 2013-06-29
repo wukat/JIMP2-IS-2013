@@ -3,9 +3,6 @@
 #include <iostream>
 #include "complex.h"
 
-
-using namespace std;
-
 class Matrix
 {
 private:

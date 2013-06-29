@@ -1,15 +1,17 @@
 #ifndef PUNKT_H
 #define PUNKT_H
 
-class Punkt{
-private:
+class Punkt
+{
   double x, y;
+
 public:
   Punkt();
-  Punkt(double _x, double _y);
+  Punkt(double, double);
+  Punkt(const Punkt &);
   ~Punkt();
 
-  double distance(Punkt inny);
+  double distance(Punkt);
   void wyswietl();
 
   double getX(){return x;}

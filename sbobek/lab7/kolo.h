@@ -7,7 +7,7 @@ class Kolo: public Ksztalt
 {
   public:
     Kolo() : Ksztalt() {};
-    virtual void rysuj() const;
+    void rysuj() const;
     virtual ~Kolo() {};
 };
 

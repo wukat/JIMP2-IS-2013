@@ -6,7 +6,6 @@ class Matrix;
 
 class Complex
 {
-private:
   double im, re;
 
 public:

@@ -2,19 +2,17 @@
 #define DZIECKO_H
 #include <iostream>
 
-using namespace std;
-
 class Dziecko
 {
 private:
-  string imie, nazwisko;
-  int wiek; 
-  string szkola;
+  std::string imie, nazwisko;
+  int wiek;
+  std::string szkola;
 
 public:
   friend class Rodzic;
   Dziecko();
-  Dziecko(string, string, int, string);
+  Dziecko(std::string, std::string, int, std::string);
   Dziecko(const Dziecko &);
   ~Dziecko();
 };

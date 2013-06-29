@@ -2,7 +2,6 @@
 #include "matrix.h"
 #include <math.h>
 
-
 using namespace std;
 
 Complex::Complex():re(0),im(0)
@@ -79,7 +78,7 @@ void Complex::show()
 
 Complex Complex::operator+(Complex c)
 {
-  Complex result(c.re + re, c.im + im); 
+  Complex result(c.re + re, c.im + im);
   return result;
 }
 
@@ -110,20 +109,20 @@ Complex Complex::operator/(Complex c)
 void Complex::operator+=(const Complex & c)
 {
   im += c.im;
-  re += c.re; 
+  re += c.re;
 }
 
 void Complex::operator-=(const Complex & c)
 {
   im -= c.im;
-  re -= c.re; 
+  re -= c.re;
 }
 
 bool Complex::operator==(const Complex & c)
 {
   if (re == c.re && im == c.im)
     return true;
-  else 
+  else
     return false;
 }
 
@@ -131,7 +130,7 @@ bool Complex::operator!=(const Complex & c)
 {
   if (re == c.re && im == c.im)
     return false;
-  else 
+  else
     return true;
 }
 

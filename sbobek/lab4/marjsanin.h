@@ -1,7 +1,6 @@
 #ifndef MARSJANIN_H
 #define MARSJANIN_H
 
-
 class Marsjanin
 {
 public:

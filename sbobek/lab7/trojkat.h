@@ -7,7 +7,7 @@ class Trojkat: public Ksztalt
 {
   public:
     Trojkat() : Ksztalt() {};
-    virtual void rysuj() const;
+    void rysuj() const;
     virtual ~Trojkat() {};
 };
 
