@@ -2,38 +2,33 @@
 
 using namespace std;
 
-Block::Block():number(0)
-{}
-
-Block::Block(int number)
-{
-  this->number = number;
+Block::Block() :
+      number(0) {
 }
 
-Block::Block(const Block &other)
-{
-  this->number = other.number;
+Block::Block(int number) {
+   this->number = number;
 }
 
-Block::~Block()
-{}
-
-void Block::show()
-{
-  cout << number << " ";
+Block::Block(const Block &other) {
+   this->number = other.number;
 }
 
-void Block::setn(int number)
-{
-  this->number = number;
+Block::~Block() {
 }
 
-int Block::getn()
-{
-  return this->number;
+void Block::show() {
+   cout << number << " ";
 }
 
-Block Block::get()
-{
-  return *this;
+void Block::setn(int number) {
+   this->number = number;
+}
+
+int Block::getn() {
+   return this->number;
+}
+
+Block Block::get() {
+   return *this;
 }

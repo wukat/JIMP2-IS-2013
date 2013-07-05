@@ -3,14 +3,16 @@
 
 class Ksztalt;
 
-class Kwadrat: public Ksztalt
-{
-  private:
-    int g;
-  public:
-    Kwadrat() : Ksztalt() {};
-    void rysuj() const;
-    virtual ~Kwadrat() {};
+class Kwadrat: public Ksztalt {
+   private:
+      int g;
+   public:
+      Kwadrat() :
+            Ksztalt() {
+      }
+      void rysuj() const;
+      virtual ~Kwadrat() {
+      }
 };
 
 #endif

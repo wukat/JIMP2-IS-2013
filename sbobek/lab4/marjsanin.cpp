@@ -6,23 +6,24 @@
 
 using namespace std;
 
-Marsjanin::Marsjanin()
-{ licznik++; }
-
-Marsjanin::Marsjanin(const Marsjanin &other)
-{ licznik++; }
-
-Marsjanin::~Marsjanin()
-{ licznik--; }
-
-void Marsjanin::atakuj()
-{
-  cout << "----->" << endl;
+Marsjanin::Marsjanin() {
+   licznik++;
 }
 
-void Marsjanin::ukryj()
-{
-  cout << " H ";
+Marsjanin::Marsjanin(const Marsjanin &other) {
+   licznik++;
+}
+
+Marsjanin::~Marsjanin() {
+   licznik--;
+}
+
+void Marsjanin::atakuj() {
+   cout << "----->" << endl;
+}
+
+void Marsjanin::ukryj() {
+   cout << " H ";
 }
 
 int Marsjanin::licznik = 0;

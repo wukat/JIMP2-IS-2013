@@ -2,21 +2,20 @@
 #define BLOCK_H
 #include <iostream>
 
-class Block
-{
-private:
-  int number;
+class Block {
+   private:
+      int number;
 
-public:
-  Block();
-  Block(int);
-  Block(const Block &);
-  ~Block();
+   public:
+      Block();
+      Block(int);
+      Block(const Block &);
+      ~Block();
 
-  void show();
-  void setn(int);
-  int getn();
-  Block get();
+      void show();
+      void setn(int);
+      int getn();
+      Block get();
 };
 
 #endif

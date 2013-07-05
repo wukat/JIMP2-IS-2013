@@ -2,17 +2,16 @@
 #define KULA_H
 #include "kolo.h"
 
-class Kula : public Kolo
-{
-  protected:
-    double z;
-  
-  public:
-    Kula();
-    Kula(double, double, double, double);
-    ~Kula();
-   
-    double pole();
+class Kula: public Kolo {
+   protected:
+      double z;
+
+   public:
+      Kula();
+      Kula(double, double, double, double);
+      ~Kula();
+
+      double pole();
 };
 
 #endif

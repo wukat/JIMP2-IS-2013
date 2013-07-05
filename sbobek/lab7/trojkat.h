@@ -3,12 +3,14 @@
 
 class Ksztalt;
 
-class Trojkat: public Ksztalt
-{
-  public:
-    Trojkat() : Ksztalt() {};
-    void rysuj() const;
-    virtual ~Trojkat() {};
+class Trojkat: public Ksztalt {
+   public:
+      Trojkat() :
+            Ksztalt() {
+      }
+      void rysuj() const;
+      virtual ~Trojkat() {
+      }
 };
 
 #endif

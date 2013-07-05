@@ -3,17 +3,16 @@
 #include <iostream>
 #include "complex.h"
 
-class Matrix
-{
-private:
-  Complex ** matr;
-  int size1, size2;
+class Matrix {
+   private:
+      Complex ** matr;
+      int size1, size2;
 
-public:
-  Matrix();
-  Matrix(int, int, Complex);
-  Matrix(const Matrix &);
-  ~Matrix();
+   public:
+      Matrix();
+      Matrix(int, int, Complex);
+      Matrix(const Matrix &);
+      ~Matrix();
 };
 
 #endif

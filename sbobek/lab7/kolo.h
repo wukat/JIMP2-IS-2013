@@ -3,12 +3,14 @@
 
 class Ksztalt;
 
-class Kolo: public Ksztalt
-{
-  public:
-    Kolo() : Ksztalt() {};
-    void rysuj() const;
-    virtual ~Kolo() {};
+class Kolo: public Ksztalt {
+   public:
+      Kolo() :
+            Ksztalt() {
+      }
+      void rysuj() const;
+      virtual ~Kolo() {
+      }
 };
 
 #endif

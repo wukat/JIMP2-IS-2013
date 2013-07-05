@@ -4,74 +4,63 @@
 
 using namespace std;
 
+string na_dwoj(int n) {
+   char a;
+   string wynik = "";
 
-string na_dwoj(int n)
-{
-  char a;
-  string wynik = "";
+   if(n % 2 == 0)
+      a = '0';
+   else
+      a = '1';
 
-  if (n % 2 == 0)
-    a = '0';
-  else
-    a = '1';
+   if(n > 1) {
+      n /= 2;
+      wynik = na_dwoj(n);
+   }
+   wynik += a;
 
-  if (n > 1)
-  {
-    n /= 2;
-    wynik = na_dwoj(n);
-  }
-  wynik += a;
-
-  return wynik;
+   return wynik;
 }
 
-bool sprawdz(string wyraz)
-{
-  int i = 0;
-  while (wyraz[i] != '\0')
-    i++;
-  int ostatni = i - 1;
+bool sprawdz(string wyraz) {
+   int i = 0;
+   while(wyraz[i] != '\0')
+      i++;
+   int ostatni = i - 1;
 
-  bool ok = true;
+   bool ok = true;
 
-  for(i = 0; i <= ostatni; i++)
-  {
-    if ((wyraz[ostatni - i] == wyraz[i]) && ok)
-      ok = true;
-    else
-      ok = false;
-  }
+   for(i = 0; i <= ostatni; i++) {
+      if((wyraz[ostatni - i] == wyraz[i]) && ok)
+         ok = true;
+      else
+         ok = false;
+   }
 
-  return ok;
+   return ok;
 }
 
+int main() {
+   int liczba_palindromow = 0;
+   string liczba;
 
-int main()
-{
-  int liczba_palindromow = 0;
-  string liczba;
-
-  for (int  i = 1; i < 1000000; i++)
-  {
-    if (i % 10 != 0)
-    {
-      ostringstream ss;
-      ss << i;
-      string liczba = ss.str();
-      if (sprawdz(liczba))
-      {
-        string liczba2 = "";
-        liczba2 = na_dwoj(i);
-        if (sprawdz(liczba2))
-        {
-          cout << liczba << " ; " << liczba2 << endl;
-          liczba_palindromow++;
-        }
+   for(int i = 1; i < 1000000; i++) {
+      if(i % 10 != 0) {
+         ostringstream ss;
+         ss << i;
+         string liczba = ss.str();
+         if(sprawdz(liczba)) {
+            string liczba2 = "";
+            liczba2 = na_dwoj(i);
+            if(sprawdz(liczba2)) {
+               cout << liczba << " ; " << liczba2 << endl;
+               liczba_palindromow++;
+            }
+         }
       }
-    }
-  }
+   }
 
-  cout << "Liczba palindromow < 1000000 baza 2 i 10 wynosi " << liczba_palindromow << endl;
+   cout << "Liczba palindromow < 1000000 baza 2 i 10 wynosi " << liczba_palindromow << endl;
 
-  return 0;
+   return 0;
 }
